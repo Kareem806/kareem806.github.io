@@ -1,0 +1,36 @@
+
+<!-- include a-frame -->
+<script src="C:\Users\KAREEM\Documents\GitHub\AR.js\aframe\examples\vendor\aframe\build\aframe.js"></script>
+<!-- include ar.js for aframe -->
+<script src='C:\Users\KAREEM\Documents\GitHub\olojoweb\AR.js\aframe\build\aframe-ar.js'></script>
+<script>ARjs.Context.baseURL = 'C:\Users\KAREEM\Documents\GitHub\olojoweb\AR.js\three.js'</script>
+<!-- include aframe-portal-door -->
+<script src="C:\Users\KAREEM\Documents\GitHub\olojoweb\OBJLoader.js"></script>
+
+
+
+<body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
+	<div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+	<a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - Model of A-Frame logo in augmented reality
+	<br/>
+	Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
+	</div>
+	<!-- <a-scene embedded arjs='sourceType: video; sourceUrl:../../data/videos/headtracking.mp4;'> -->
+		<a-scene embedded arjs='trackingMethod: best;'>
+        <!-- <a-scene embedded arjs='sourceType: webcam; sourceWidth: 240; sourceHeight: 180;'> -->		
+	<!-- <a-scene arjs='sourceType: image; sourceUrl:../../data/images/screenshot.png'> -->
+	<!-- <a-scene embedded arjs='sourceType: image; sourceUrl:../../data/images/armchair.jpg;'> -->
+
+<a-anchor hit-testing-enabled='true'>
+
+		<a-assets>
+			<a-asset-item id="assetAframe" src="C:\Users\KAREEM\Downloads\unity\bg2_obj\bg4_obj.obj"></a-asset-item>
+		</a-assets>
+
+		<!-- <a-marker type='unknown'> -->
+		<a-entity obj-model="src: #assetAframe" rotation='-90 0 0'scale='0.02 0.02 0.02'></a-entity>
+
+		<a-marker-camera preset='hiro'></a-marker-camera>
+</a-anchor>
+	</a-scene>
+</body>
